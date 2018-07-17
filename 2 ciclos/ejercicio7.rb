@@ -14,7 +14,9 @@
 =end
 
 a = 10
+
 a.times do |i|
+i = i + 1
   if i.even?
     puts 'par'
   else
