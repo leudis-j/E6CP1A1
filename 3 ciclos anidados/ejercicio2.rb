@@ -24,3 +24,34 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+
+
+tr = 4
+i = 1
+td = 6  
+tabla= ''
+
+
+tr.times do |i|
+  if i ==0
+    tabla += "<table>\n<tbody>\n"
+  elsif i == (tr-2)
+    tabla += "</tbody>\n"
+  elsif i == (tr-1)
+    tabla += "</table>\n"
+  else
+    for y in 1..3 do
+      td.times do |x|
+        if x == 0
+          tabla += "\t<tr>\n"
+        elsif x == (td-1)
+          tabla += "\t</tr>\n"
+        else
+          tabla += "\t  <td> #{i} </td>\n"
+          i +=1
+        end
+    end
+  end
+end
+end
+puts tabla
